@@ -4,3 +4,4 @@ npm install react-router-dom localforage match-sorter sort-by
 npm install swiper
 npm i flowbite-react
 npm install react-icons
+npm install firebase

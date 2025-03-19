@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Outlet } from 'react-router-dom'
 import NavBar from './components/NavBar'
+import MyFooter from './components/MyFooter'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,6 +13,7 @@ function App() {
     <>
       <NavBar/>
       <Outlet/>
+      <MyFooter/>
     </>
   )
 }

@@ -61,7 +61,7 @@ const router = createBrowserRouter([
             {
                 path: "/admin/dashboard/edit-book/:id",
                 element: <EditBook/>,
-                loader: ({params}) => fetch(`https://humble-trout-jx944rvwrr7hq5x4-5000.github.dev/book/${params.id}`)
+                loader: ({params}) => fetch(`https://humble-trout-jx944rvwrr7hq5x4-5000.app.github.dev/book/${params.id}`)
             }
         ]
     }

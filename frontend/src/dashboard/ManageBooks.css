@@ -1,0 +1,44 @@
+/* Ensure table and text are visible */
+.manage-books-table {
+    background-color: white !important;
+    color: black !important;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* Table header styling */
+  .manage-books-table th {
+    background-color: #f3f4f6 !important; /* Light gray */
+    color: black !important;
+    border: 1px solid #ddd !important;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Table row styling */
+  .manage-books-table td {
+    border: 1px solid #ddd !important;
+    padding: 10px;
+  }
+  
+  /* Make sure the text is visible in dark mode */
+  .dark .manage-books-table {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .dark .manage-books-table th,
+  .dark .manage-books-table td {
+    border-color: black !important;
+  }
+  
+  /* Ensure links are visible */
+  .manage-books-table a {
+    color: #06b6d4 !important; /* Cyan */
+    text-decoration: none;
+  }
+  
+  .manage-books-table a:hover {
+    text-decoration: underline;
+  }
+  

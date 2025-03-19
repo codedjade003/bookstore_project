@@ -3,13 +3,22 @@ import { BiBuoy } from "react-icons/bi";
 import { HiArrowSmRight, HiChartPie, HiInbox, HiOutlineCloudUpload, HiShoppingBag, HiTable, HiUser, HiViewBoards } from "react-icons/hi";
 import userImg from "../assets/profile.jpg"
 
+
 const SideBar = () => {
   return (
     <div className="h-full">
-      <Sidebar aria-label="Sidebar with content separator example" className="h-full">
-        <Sidebar.Logo href="#" img={userImg} imgAlt="Flowbite logo">
-          Flowbite
+      <Sidebar aria-label="Sidebar with content separator example">
+        <Sidebar.Logo 
+          href="#" 
+          img={userImg} 
+          imgAlt="Flowbite logo" 
+          theme={{ img: "w-14 h-14 rounded-full" }} 
+          className="flex gap-2 pt-3 mb-4"
+        >
+          <span className="text-xl font-semibold">Flowbite</span>
         </Sidebar.Logo>
+
+
         <Sidebar.Items>
           <Sidebar.ItemGroup>
             <Sidebar.Item href="/admin/dashboard" icon={HiChartPie}>

@@ -43,7 +43,7 @@ const MyFooter = () => {
           </div>
         </div>
         <div className="w-full bg-gray-900 px-4 py-6 sm:flex sm:items-center sm:justify-between">
-          <Footer.Copyright href="#" by="Flowbite™" year={2024} className="text-gray-400" />
+          <Footer.Copyright href="#" by="Flowbite™" year={2025} className="text-gray-400" />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
             <Footer.Icon href="#" icon={BsFacebook} className="text-gray-400 hover:text-white" />
             <Footer.Icon href="#" icon={BsInstagram} className="text-gray-400 hover:text-white" />

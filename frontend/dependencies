@@ -5,3 +5,7 @@ npm install swiper
 npm i flowbite-react
 npm install react-icons
 npm install firebase
+npm install dotenv
+
+backend dependencies
+npm install express cors mongodb dotenv mongoose node-cron @huggingface/inference nodemon

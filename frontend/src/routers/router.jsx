@@ -13,6 +13,11 @@ import Dashboard from "../dashboard/Dashboard";
 import UploadBook from "../dashboard/UploadBook";
 import ManageBooks from "../dashboard/ManageBooks";
 import EditBook from "../dashboard/EditBook";
+import SignUp from "../components/SignUp";
+import Login from "../components/Login";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Logout from "../components/Logout";
+import BlogPost from "../components/BlogPost";
 
 const router = createBrowserRouter([
     {
@@ -36,6 +41,10 @@ const router = createBrowserRouter([
                 element: <Blog/>
             },
             {
+                path: "/blog/:id",
+                element: <BlogPost/>
+            },
+            {
                 path: '/book/:id',
                 element: <SingleBook/>,
                 loader: ({params}) => fetch(`https://humble-trout-jx944rvwrr7hq5x4-5000.app.github.dev/book/${params.id}`)
@@ -48,7 +57,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/admin/dashboard",
-                element: <Dashboard/>
+                element: <PrivateRoute><Dashboard/></PrivateRoute>
             },
             {
                 path: "/admin/dashboard/upload",
@@ -64,7 +73,20 @@ const router = createBrowserRouter([
                 loader: ({params}) => fetch(`https://humble-trout-jx944rvwrr7hq5x4-5000.app.github.dev/book/${params.id}`)
             }
         ]
-    }
+    },
+    {
+        path: "sign-up",
+        element: <SignUp/>
+    },
+    {
+        path: "login",
+        element: <Login/>
+    },
+    {
+        path: "logout",
+        element: <Logout/>
+    },
+
 ]);
 
 export default router;

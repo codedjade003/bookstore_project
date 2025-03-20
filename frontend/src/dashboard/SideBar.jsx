@@ -2,20 +2,32 @@ import { Sidebar } from "flowbite-react";
 import { BiBuoy } from "react-icons/bi";
 import { HiArrowSmRight, HiChartPie, HiInbox, HiOutlineCloudUpload, HiShoppingBag, HiTable, HiUser, HiViewBoards } from "react-icons/hi";
 import userImg from "../assets/profile.jpg"
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthProvider";
 
 
-const SideBar = () => {
+export const SideBar = () => {
+  const {user} = useContext(AuthContext)
   return (
     <div className="h-full">
       <Sidebar aria-label="Sidebar with content separator example">
         <Sidebar.Logo 
           href="#" 
-          img={userImg} 
+          img={user?.photoURL} 
           imgAlt="Flowbite logo" 
-          theme={{ img: "w-14 h-14 rounded-full" }} 
+          theme={{ img: "w-11 h-11 rounded-full" }} 
           className="flex gap-2 pt-3 mb-4"
         >
-          <span className="text-xl font-semibold">Flowbite</span>
+          <span className="text-xl font-semibold"> 
+          <p>
+            {user?.displayName 
+              ? user.displayName.length > 15 
+                ? user.displayName.slice(0, 15) + "..."
+                : user.displayName
+              : "Demo User"}
+          </p>
+
+            </span>
         </Sidebar.Logo>
 
 
@@ -30,28 +42,8 @@ const SideBar = () => {
             <Sidebar.Item href="/admin/dashboard/manage" icon={HiInbox}>
               Manage Books
             </Sidebar.Item>
-            <Sidebar.Item href="#" icon={HiUser}>
-              Users
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={HiShoppingBag}>
-              Products
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={HiArrowSmRight}>
-              Sign In
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={HiTable}>
-              Sign Up
-            </Sidebar.Item>
-          </Sidebar.ItemGroup>
-          <Sidebar.ItemGroup>
-            <Sidebar.Item href="#" icon={HiChartPie}>
-              Upgrade to Pro
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={HiViewBoards}>
-              Documentation
-            </Sidebar.Item>
-            <Sidebar.Item href="#" icon={BiBuoy}>
-              Help
+            <Sidebar.Item href="/logout" icon={HiTable}>
+              Log Out
             </Sidebar.Item>
           </Sidebar.ItemGroup>
         </Sidebar.Items>

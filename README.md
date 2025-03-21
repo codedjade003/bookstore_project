@@ -30,10 +30,10 @@ npm install react-icons
 npm install firebase
 npm install dotenv
 ```
-after that, create a .env file and copy the content of the .env.development.local file into it
+after that, create a .env file and copy the content of the .environmentvariables file into it
 ```sh
 touch .env
-cp .env.development.local .env
+cp .environmentvariables .env
 ```
 after that, run this to start the client
 ```sh
@@ -49,10 +49,10 @@ NOTE: Firebase does not allow access to all domains, if you're using a cloud cod
 cd backend
 npm install express cors mongodb dotenv mongoose node-cron @huggingface/inference nodemon
 ```
-after that, create a .env file and copy the content of the .env.development.local file into it
+after that, create a .env file and copy the content of the .environmentvariables file into it
 ```sh
 touch .env
-cp .env.development.local .env
+cp .environmentvariables .env
 ```
 
 replace with your own apis and run this to start the server

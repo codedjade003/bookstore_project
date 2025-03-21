@@ -18,6 +18,10 @@ import Login from "../components/Login";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Logout from "../components/Logout";
 import BlogPost from "../components/BlogPost";
+import PrivacyPolicy from "../components/PrivacyPolicy";
+import Licensing from "../components/Licensing";
+import Contact from "../components/Contact";
+import Terms from "../components/Terms";
 
 const router = createBrowserRouter([
     {
@@ -86,6 +90,10 @@ const router = createBrowserRouter([
         path: "logout",
         element: <Logout/>
     },
+    { path: "/contact", element: <Contact /> }, // New route
+    { path: "/terms", element: <Terms /> }, // New route
+    { path: "/privacy-policy", element: <PrivacyPolicy /> }, // New route
+    { path: "/licensing", element: <Licensing /> } // New route
 
 ]);
 

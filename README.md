@@ -42,7 +42,7 @@ npm run dev
 
 NOTE: Firebase does not allow access to all domains, if you're using a cloud codespace like github or gitpod, be sure to whitelist the domain before proceeding, else certain features (i.e google sign in) may not work
 
-# create a new terminal for the backend setup
+#### create a new terminal for the backend setup
 
 ### Backend Setup
 ```sh
